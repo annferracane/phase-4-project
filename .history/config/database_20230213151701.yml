@@ -78,7 +78,12 @@ test:
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
-
+#
+# production:
+#   <<: *default
+#   database: college_app_production
+#   username: college_app
+#   password: <%= ENV["COLLEGE_APP_DATABASE_PASSWORD"] %>
 
 production:
   <<: *default
