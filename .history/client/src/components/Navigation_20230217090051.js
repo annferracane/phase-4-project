@@ -29,6 +29,11 @@ function Navigation() {
     { name: 'Submit a Tip', link: '/submit-a-tip' }  
   ];
 
+  const pagesRestricted = [
+    { name: 'Schools', link: '/schools' } 
+  ];
+
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };

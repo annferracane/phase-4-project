@@ -35,7 +35,7 @@ puts "Seeding users and profiles..."
 
     fake_user["email"] = (fake_user["last_name"] + "." + fake_user["first_name"] + "@" + Faker::Internet.domain_name).downcase
     
-    user = User.create(email: fake_user["email"], password: Faker::Internet.password, type: ["Prospective Student", "College Student", "Alum"].sample)
+    user = User.create(email: fake_user["email"], password: Faker::Internet.password, user_type: ["Prospective Student", "College Student", "Alum"].sample)
 
     Profile.create(
         first_name: fake_user["first_name"], 

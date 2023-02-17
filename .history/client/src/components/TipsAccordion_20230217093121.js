@@ -128,7 +128,7 @@ function TipsAccordion({ tips, deleteTip }) {
             <Chip label={tip.on_or_of_campus ? "On Campus" : "Off Campus"} color="secondary" />
             <Chip label={tip.category} color="success" />
           </Stack>
-          { user.id === tip.user_id ? deleteButton : null }
+          { user.id == tip.user_id ? deleteButton : null }
         </AccordionDetails>
       </Accordion>
     )
