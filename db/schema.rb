@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_204823) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_16_042043) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,11 +34,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_204823) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tips", force: :cascade do |t|
+    t.string "title"
+    t.boolean "on_or_off_campus"
+    t.string "category"
+    t.text "content"
+    t.integer "school_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_type"
   end
 
 end
