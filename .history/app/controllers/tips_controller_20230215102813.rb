@@ -1,3 +1,0 @@
-class TipsController < ApplicationController
-    
-end

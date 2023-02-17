@@ -1,8 +1,0 @@
-class School < ApplicationRecord
-    has_many :tips
-    has_many :users
-
-    validates :name, presence: true
-    validates :domain, presence: true
-    validates_format_of :domain, with: /\A((?:[-a-z0-9]+\.)+(edu))\z/i, message: "School domain must be a .edu address"
-end
